@@ -1,0 +1,24 @@
+{
+  "name": "capstone-newbies",
+  "version": "1.0.0",
+  "description": "This app is meant to track the infection rate of COVID19 and direct users to nearby testing centers while also being able to display a heatmap back to the user",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyleyT/Capstone-Newbies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyleyT/Capstone-Newbies/issues"
+  },
+  "homepage": "https://github.com/RyleyT/Capstone-Newbies#readme",
+  "dependencies": {
+    "http": "0.0.1-security",
+    "http-status-codes": "^2.1.2"
+  }
+}
