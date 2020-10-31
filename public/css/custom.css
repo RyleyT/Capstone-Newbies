@@ -22,7 +22,7 @@ h1 {
 }
 
 .navbar a{
-    float: right;
+    float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 22px;
@@ -39,3 +39,29 @@ h1 {
     background-color: #4CAF50;
     color: white;
   }
+
+.users {
+    text-align: center;
+}
+
+.users table {
+    text-align: center;
+}
+
+.table {
+    background-color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h2 {
+    color: rgb(243, 239, 239);
+    padding: 15px;
+    font-size: 72px;
+    text-align: center; 
+}
+
+.table th {
+    padding: 10px 20px;
+}

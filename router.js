@@ -1,5 +1,15 @@
 const express = require('express'),
-router = express.Router()
+router = express.Router(),
+mongoose = require('mongoose'),
+userController = require('./controllers/userController')
+
+//Database connection
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://ryleyt:1qaz@cluster0.h0wyn.mongodb.net/CapstoneNewbies?retryWrites=true&w=majority", {
+  useFindAndModify: false,
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+mongoose.Promise = global.Promise;
 
 //Home page
 router.get('/', (req,res) => {
@@ -20,5 +30,16 @@ router.get('/about', (req, res) => {
 router.get('/tracker', (req, res) => {
     res.render('tracker.html');
 })
+
+//Register page
+router.get('/register', (req, res) => {
+    res.render('register.html');
+})
+router.post('/register', userController.create, userController.redirectView)
+
+//Users page
+router.get('/users', userController.index);
+router.delete('/users/:id/delete', userController.delete, userController.redirectView);
+
 
 module.exports = router;
