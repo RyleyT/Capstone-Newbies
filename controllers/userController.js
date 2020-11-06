@@ -1,3 +1,4 @@
+const Auth = require("../utils/authentication");
 const User = require("../models/user"),
     getUserParams = (body) => {
         return {
@@ -10,16 +11,22 @@ const User = require("../models/user"),
 module.exports = {
     create: (req, res, next) => {
         let userParams = getUserParams(req.body);
-        User.create(userParams)
-        .then(user => {
-            res.locals.redirect ="users";
-            res.locals.user = user;
-            next();
-        })
-        .catch(error => {
-            console.log(`Error saving user:${error.message}`);
-            next(error);
-        })
+        Auth.hashPassword(userParams.password)
+        .then(hashed => 
+            {
+                userParams.password = hashed;
+                User.create(userParams)
+                .then(user => {
+                    res.locals.redirect ="users";
+                    res.locals.user = user;
+                    next();
+                })
+                .catch(error => {
+                    console.log(`Error saving user:${error.message}`);
+                    next(error);
+                })
+            })
+        
     },
 
     delete: (req, res, next) => {
