@@ -1,8 +1,8 @@
-const bcrypt = require("bcrypt");
-
+const bcrypt = require("bcryptjs");
+const Rounds = 12;//cost factor to creating hash. The higher it is the longer it takes to create hash and the longer it will take to bruteforce(ideally)
 module.exports = {
-    hashPassword: (password, rounds) => {
-       let hashedPW = bcrypt.hash(password, rounds);
-       return hashedPW;
+    hashPassword: (password) => 
+    {
+       return bcrypt.hash(password, Rounds);
     }
 }
