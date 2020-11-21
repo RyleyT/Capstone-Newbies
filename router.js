@@ -1,7 +1,8 @@
 const express = require('express'),
 router = express.Router(),
 mongoose = require('mongoose'),
-userController = require('./controllers/userController')
+userController = require('./controllers/userController'),
+dataController = require('./controllers/dataController')
 
 //Database connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://ryleyt:1qaz@cluster0.h0wyn.mongodb.net/CapstoneNewbies?retryWrites=true&w=majority", {
@@ -27,9 +28,7 @@ router.get('/about', (req, res) => {
 })
 
 //Tracker page
-router.get('/tracker', (req, res) => {
-    res.render('tracker.html');
-})
+router.get('/tracker', dataController.index);
 
 //Register page
 router.get('/register', (req, res) => {
