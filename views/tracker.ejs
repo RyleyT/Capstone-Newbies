@@ -11,8 +11,8 @@
                     <th>State</th>
                     <th>Positive</th>
                     <th>Negative</th>
+                    <th>Total Tests</th>
                     <th>Probable Cases</th>
-                    <th>Pending</th>
                     <th>Hospitalized Currently</th>
                     <th>Hospitalized Cumulative</th>
                     <th>Death Confirmed</th>
@@ -31,10 +31,10 @@
                             <%= state.negative %>
                         </td>
                         <td>
-                            <%= state.probableCases %>
+                            <%= state.totalTestResults %>
                         </td>
                         <td>
-                            <%= state.pending %>
+                            <%= state.probableCases %>
                         </td>
                         <td>
                             <%= state.hospitalizedCurrently %>
