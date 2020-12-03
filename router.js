@@ -28,7 +28,7 @@ router.get('/about', (req, res) => {
 })
 
 //Tracker page
-router.get('/tracker', dataController.index);
+router.get('/tracker', dataController.index)
 
 //Register page
 router.get('/register', (req, res) => {

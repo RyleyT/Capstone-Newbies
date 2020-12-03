@@ -24,7 +24,8 @@ app.use(express.json());
 //Middleware to pass local variables to views
 app.use((req, res, next) => {
     res.locals.currentUser = req.user;
-    console.log(res.locals.currentUser);
+    //res.locals.states = req.states;
+    //console.log(res.locals.currentUser);
     next();
 });
 

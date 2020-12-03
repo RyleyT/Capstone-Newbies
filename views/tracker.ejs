@@ -1,0 +1,51 @@
+   <head>
+        <meta charset="utf-8">
+        <title>Home</title>
+        <link href="/css/custom.css" rel="stylesheet" type = "text/css"/>
+    </head>
+   
+        <h2 class ="center">Tracker Table</h2>
+        <table class = "table">
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Positive</th>
+                    <th>Negative</th>
+                    <th>Probable Cases</th>
+                    <th>Pending</th>
+                    <th>Hospitalized Currently</th>
+                    <th>Hospitalized Cumulative</th>
+                    <th>Death Confirmed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% states.forEach(state => { %>
+                    <tr>
+                        <td>
+                            <%= state.state %>
+                        </td>
+                        <td>
+                            <%= state.positive %>
+                        </td>
+                        <td>
+                            <%= state.negative %>
+                        </td>
+                        <td>
+                            <%= state.probableCases %>
+                        </td>
+                        <td>
+                            <%= state.pending %>
+                        </td>
+                        <td>
+                            <%= state.hospitalizedCurrently %>
+                        </td>
+                        <td>
+                            <%= state.hospitalizedCumulative %>
+                        </td>
+                        <td>
+                            <%= state.deathConfirmed %>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody> 
+        </table>

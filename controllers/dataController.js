@@ -1,15 +1,15 @@
 const fetch = require('node-fetch');
 
 module.exports = {
-    index: (req, res, next) => {
-        fetch('https://api.covidtracking.com/v1/states/current.json')
+    index: async (req, res, next) => {
+       await fetch('https://api.covidtracking.com/v1/states/current.json')
         .then(apiResponse => apiResponse.json())
         .then(apijson =>{
-            console.log(apijson[10]);
-        });
-
-        res.render("tracker.html");
-        next();
+            res.locals.states = apijson;
+            console.log(res.locals.states[10]);
+            res.render('tracker.ejs');
+            next();       
+        });       
     },
 
     redirectView: (req, res, next) => {
