@@ -7,21 +7,59 @@ To start:
     2: npm start to start application
 
 Overview about the submission structure:
-    final documentation: Project Report, Manuals 
-                Contains the project report and manuals necessart for the final submission
+<ul>
+    <li>
+        final documentation: Project Report, Manuals
+        <ul>
+            <li>Contains the project report and manuals necessart for the final submission</li>
+        </ul>
+    </li>    
+    <li>
     controllers: dataController.js, userController.js
-                Javascript files that act on our data
+        <ul>
+            <li> Javascript files that act on our data</li>
+        </ul>
+    </li>    
+    <li>
     models: user.js
-                Contains our data model that is used with the mongoDB
+        <ul>
+            <li>Contains our data model that is used with the mongoDB</li>
+        </ul>
+    </li>
+    <li>
     public: css, images
-                Contains css for our pages
+        <ul>
+            <li>Contains css for our pages</li>
+        </ul>
+    </li>
+    <li>
     utils: authentication.js
-                Javascript file that handles hashing passwords
+        <ul>
+            <li>Javascript file that handles hashing passwords</li>
+        </ul>
+    </li>
+    <li>
     views: partials, about.html, index.html, layout.ejs, register.html, tracker.ejs, users.ejs
-                Html for webpages
+        <ul>
+            <li>Html for webpages</li>
+        </ul>
+    </li>
+    <li>
     main.js: 
-            Main javascript file.
+        <ul>
+            <li>Main javascript file.</li>
+        </ul>
+    </li>
+    <li>
     package-lock.json, package.json: 
-            used by npm
+        <ul>
+            <li>used by npm</li>
+        </ul>
+    </li>
+    <li>
     router.js:
-            Handles app routing
+        <ul>
+            <li>Handles app routing</li>
+        </ul>
+    </li>
+    <ul>
