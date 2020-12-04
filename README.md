@@ -11,7 +11,7 @@ Overview about the submission structure:
     <li>
         final documentation: Project Report, Manuals
         <ul>
-            <li>Contains the project report and manuals necessart for the final submission</li>
+            <li>Contains the project report and manuals necessary for the final submission</li>
         </ul>
     </li>    
     <li>
